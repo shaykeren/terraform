@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_s3_bucket_object" "object" {
   bucket  = "${var.BUCKET_NAME}"
   key     = "${var.SANDBOX_ID}"
-  content = "USER_CONTENT:${var.USER_CONTENT}\nSERVER_NAME:${var.SERVER_NAME}\nSERVER_VERSION:${var.SERVER_VERSION}\nOUTPUT_PUBLISHER_STR:${var.OUTPUT_PUBLISHER_STR}\nSANDBOX_DETAILS:${var.SANDBOX_DETAILS}"
+  content = "USER_CONTENT:${var.USER_CONTENT}\nSERVER_NAME:${var.SERVER_NAME}\nSERVER_VERSION:${var.SERVER_VERSION}\nOUTPUT_PUBLISHER_STR:${var.OUTPUT_PUBLISHER_STR}\nSANDBOX_DETAILS:${var.SANDBOX_DETAILS}\nPUBLIC_ADDRESS:${var.PUBLIC_ADDRESS}"
 }
 
 data "external" "presign" {
