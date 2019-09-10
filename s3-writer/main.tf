@@ -18,8 +18,7 @@ resource "aws_s3_bucket_object" "object" {
   SANDBOX_ID:${var.SANDBOX_ID}
   SANDBOX_ID_OLD:${var.SANDBOX_ID_OLD}
   OUTPUTS:${var.OUTPUTS}
-  ALL_IN_ONE:${var.ALL_IN_ONE}
-  EOF
+  ALL_IN_ONE:${var.ALL_IN_ONE}EOF
 }
 
 data "external" "presign" {
